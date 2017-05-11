@@ -1,0 +1,240 @@
+//web fonts
+@import url(https://fonts.googleapis.com/css?family=Overpass)
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css)
+
+//color
+$c_teal: #008080
+$c_azure: #007fff
+$c_straw: #ffdb58
+$c_bleach: #f3f3f3
+$c_black: #333333
+$c_grey: #D9D6CF
+
+//spec
+$font_basic: 8px
+$max: 768px
+$button_border: 1px
+$button-radius: 30px
+$font: 'Overpass', 'cwTeXYen', sans-serif
+
+//formula
+@mixin size($W,$H)
+  width: $W
+  height: $H
+
+*
+  //border: solid 1px
+  position: relative
+
+html, body
+  padding: 15px
+  margin: 15px
+  //background-color: red
+
+#header
+  height: 155px
+  background-color: $c_bleach
+  overflow: hidden
+  & #visual
+    width: 13%
+    positon: absolute
+    border: 2px solid $c_azure
+    box-shadow: 0px 0px 1px 0.5px $c_azure
+    border-radius: 100%
+    margin-left: 30px
+    
+.max
+  max-width: $max
+  margin-top: -20px
+  margin-left: 10px
+
+.container
+  font-family: $font
+  .eng
+    letter-spacing: 0.2px
+  .follow
+    color: rgba(0,0,0,0.25)
+    margin-top: -20px
+    display: inline-block
+  & h1.zh-tw
+    font-size: $font_basic*5
+    .follow
+      font-size: $font_basic*2.5
+  & h1.eng
+    font-size: $font_basic*3
+    margin-top: -$font_basic*5
+    margin-left: 3px
+    .follow
+      font-size: $font_basic*2
+  & h2.zh-tw
+    font-size: $font_basic*4
+    .follow
+      font-size: $font_basic*2
+  & h2.eng
+    font-size: $font_basic*2 
+    margin-top : -$font_basic*4.8
+    margin-left: $font_basic*0.3
+    .follow
+      font-size: $font_basic*1.5
+  & h3.zh-tw
+    font-size: $font_basic*2.5
+    .follow
+      font-size: $font_basic*1.5 
+  & h3.eng
+    font-size: $font_basic*1.5
+    margin-top: -$font_basic*3.2
+    margin-left: $font_basic*0.125
+    .follow
+      font-size: $font_basic*1.25
+  & #showLine   
+    width: $max*0.5
+    border: $c_azure dotted 0.2em
+    margin-left: 0px
+  & h3.hint
+    margin-top: 20px
+    color: $c_azure
+  & .hint.hintMain
+    margin-left: -10px
+    margin-top: 0px
+    display: inline-block
+    padding: 5px 10px 5px 10px
+    color: red
+    border: 2px solid red
+    border-radius: 8px
+    
+
+  //關於色彩
+  & .colorGroup
+    display: inline-block
+    margin-right: 30px
+  & .palette,.circle  
+    display:inline-block
+  & .palette
+    width: 72px
+    font-size: 16px
+    letter-spacing: 1px
+    line-height: 24px
+    margin-bottom: 8px
+    
+  & .circle
+    border: dashed 1px
+    +size(30px,30px)
+    border-radius: 100%
+  & .c_teal
+    background-color: $c_teal
+    border: none
+  & .c_azure
+    background-color: $c_azure
+    border: none
+  & .c_straw
+    background-color: $c_straw
+    +size(27px,27px)
+  & .c_bleach 
+    background-color: $c_bleach
+    +size(27px, 27px)
+  & .c_black
+    background-color: $c_black
+    border: none
+  
+    // 關於按鈕
+  & .button
+    display: inline-block
+    padding: 5px 25px 7px 25px
+    border: solid $button_border $c_black
+    border-radius: $button-radius 
+    margin-right: 10px
+    margin-left: 10px
+    font-size: $font_basic*2
+    cursor: pointer
+
+  & .b_teal
+    background-color: $c_teal
+    color: $c_bleach
+    border: none
+    font-weight: 200
+    box-shadow: $c_teal 5px 5px 3px -4px
+  & .b_azure
+    background-color: $c_azure
+    color: $c_bleach
+    border: none
+    font-weight: 500
+    box-shadow: $c_azure 3px 3px 7px 1px
+  & .b_straw
+    background-color: $c_straw
+    color: $c_teal
+    border: solid $c_teal 0.1em
+    font-weight: 500
+  & .b_ban
+    background-color: grey
+    color: $c_grey
+    border: none
+    
+.first
+  background-color: $c_bleach
+  
+.second
+  background-color: $c_azure
+  box-shadow: 0px 0px 100px 130px $c_azure
+  color: $c_bleach
+  & #showLine
+    border: $c_straw dotted 0.2em
+  & h3.hint
+    color: $c_straw
+  & h4.hint.hintMain
+    color: $c_straw
+    border-color: $c_straw
+  & .c_teal
+    border: dashed 1px
+    +size(27px,27px)
+  & .c_azure
+    border: dashed 1px
+    +size(27px,27px)
+  & .c_straw
+    border: none
+    +size(30px,30px)
+  & .b_teal
+    border: solid $c_straw 0.1em
+  & .b_azure
+    color: $c_straw
+    border: solid $c_straw 0.1em
+  & .b_straw
+    color: $c_azure
+    border: none
+
+.third
+  background-color: $c_straw
+  color: $c_black
+  box-shadow: 0px 0px 100px 130px $c_straw
+  & #showLine
+    border: $c_azure dotted 0.2em
+  & h3.hint
+    color: $c_azure
+  & h4.hint.hintMain
+    color: $c_azure
+    border-color: $c_azure
+  & .c_straw
+    border: dashed 1px
+    +size(27px,27px)
+  & .c_black
+    border: dashed 1px
+    +size(27px,27px)
+
+
+#footbar
+  display: block
+  background-color: $c_bleach
+  padding: 0px 10px 15px 10px
+  border-radius: 10px
+  position: fixed
+  left: 50%
+  bottom: -3%
+  & .h4
+  color: $c_azure
+  line-height: 3px
+  text-align: center
+
+  
+    
+    
+  
+  

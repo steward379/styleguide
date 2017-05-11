@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Overpass);
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+* {
+  position: relative;
+}
+
+html, body {
+  padding: 15px;
+  margin: 15px;
+}
+
+#header {
+  height: 155px;
+  background-color: #f3f3f3;
+  overflow: hidden;
+}
+#header #visual {
+  width: 13%;
+  positon: absolute;
+  border: 2px solid #007fff;
+  box-shadow: 0px 0px 1px 0.5px #007fff;
+  border-radius: 100%;
+  margin-left: 30px;
+}
+
+.max {
+  max-width: 768px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.container {
+  font-family: "Overpass", "cwTeXYen", sans-serif;
+}
+.container .eng {
+  letter-spacing: 0.2px;
+}
+.container .follow {
+  color: rgba(0, 0, 0, 0.25);
+  margin-top: -20px;
+  display: inline-block;
+}
+.container h1.zh-tw {
+  font-size: 40px;
+}
+.container h1.zh-tw .follow {
+  font-size: 20px;
+}
+.container h1.eng {
+  font-size: 24px;
+  margin-top: -40px;
+  margin-left: 3px;
+}
+.container h1.eng .follow {
+  font-size: 16px;
+}
+.container h2.zh-tw {
+  font-size: 32px;
+}
+.container h2.zh-tw .follow {
+  font-size: 16px;
+}
+.container h2.eng {
+  font-size: 16px;
+  margin-top: -38.4px;
+  margin-left: 2.4px;
+}
+.container h2.eng .follow {
+  font-size: 12px;
+}
+.container h3.zh-tw {
+  font-size: 20px;
+}
+.container h3.zh-tw .follow {
+  font-size: 12px;
+}
+.container h3.eng {
+  font-size: 12px;
+  margin-top: -25.6px;
+  margin-left: 1px;
+}
+.container h3.eng .follow {
+  font-size: 10px;
+}
+.container #showLine {
+  width: 384px;
+  border: #007fff dotted 0.2em;
+  margin-left: 0px;
+}
+.container h3.hint {
+  margin-top: 20px;
+  color: #007fff;
+}
+.container .hint.hintMain {
+  margin-left: -10px;
+  margin-top: 0px;
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 8px;
+}
+.container .colorGroup {
+  display: inline-block;
+  margin-right: 30px;
+}
+.container .palette {
+  width: 72px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.container .circle {
+  border: dashed 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.container .c_teal {
+  background-color: #008080;
+  border: none;
+}
+.container .c_azure {
+  background-color: #007fff;
+  border: none;
+}
+.container .c_straw {
+  background-color: #ffdb58;
+  width: 27px;
+  height: 27px;
+}
+.container .c_bleach {
+  background-color: #f3f3f3;
+  width: 27px;
+  height: 27px;
+}
+.container .c_black {
+  background-color: #333333;
+  border: none;
+}
+.container .button {
+  display: inline-block;
+  padding: 5px 25px 7px 25px;
+  border: solid 1px #333333;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container .b_teal {
+  background-color: #008080;
+  color: #f3f3f3;
+  border: none;
+  font-weight: 200;
+  box-shadow: #008080 5px 5px 3px -4px;
+}
+.container .b_azure {
+  background-color: #007fff;
+  color: #f3f3f3;
+  border: none;
+  font-weight: 500;
+  box-shadow: #007fff 3px 3px 7px 1px;
+}
+.container .b_straw {
+  background-color: #ffdb58;
+  color: #008080;
+  border: solid #008080 0.1em;
+  font-weight: 500;
+}
+.container .b_ban {
+  background-color: grey;
+  color: #D9D6CF;
+  border: none;
+}
+
+.first {
+  background-color: #f3f3f3;
+}
+
+.second {
+  background-color: #007fff;
+  box-shadow: 0px 0px 100px 130px #007fff;
+  color: #f3f3f3;
+}
+.second #showLine {
+  border: #ffdb58 dotted 0.2em;
+}
+.second h3.hint {
+  color: #ffdb58;
+}
+.second h4.hint.hintMain {
+  color: #ffdb58;
+  border-color: #ffdb58;
+}
+.second .c_teal {
+  border: dashed 1px;
+  width: 27px;
+  height: 27px;
+}
+.second .c_azure {
+  border: dashed 1px;
+  width: 27px;
+  height: 27px;
+}
+.second .c_straw {
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.second .b_teal {
+  border: solid #ffdb58 0.1em;
+}
+.second .b_azure {
+  color: #ffdb58;
+  border: solid #ffdb58 0.1em;
+}
+.second .b_straw {
+  color: #007fff;
+  border: none;
+}
+
+.third {
+  background-color: #ffdb58;
+  color: #333333;
+  box-shadow: 0px 0px 100px 130px #ffdb58;
+}
+.third #showLine {
+  border: #007fff dotted 0.2em;
+}
+.third h3.hint {
+  color: #007fff;
+}
+.third h4.hint.hintMain {
+  color: #007fff;
+  border-color: #007fff;
+}
+.third .c_straw {
+  border: dashed 1px;
+  width: 27px;
+  height: 27px;
+}
+.third .c_black {
+  border: dashed 1px;
+  width: 27px;
+  height: 27px;
+}
+
+#footbar {
+  display: block;
+  background-color: #f3f3f3;
+  padding: 0px 10px 15px 10px;
+  border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  bottom: -3%;
+  color: #007fff;
+  line-height: 3px;
+  text-align: center;
+}
